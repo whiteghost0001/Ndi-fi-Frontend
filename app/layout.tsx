@@ -1,5 +1,6 @@
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import Providers from "@/components/providers";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -27,13 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Navbar />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AnimatePresence mode="wait">{children}</AnimatePresence>
+        <Providers>
+          <Navbar />
+          <AnimatePresence mode="wait">{children}</AnimatePresence>
+          <Footer />
+        </Providers>
       </body>
-      <Footer />
     </html>
   );
 }

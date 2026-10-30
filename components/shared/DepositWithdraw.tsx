@@ -37,15 +37,15 @@ const DepositWithdraw = () => {
 
         <CardContent className="mt-6 space-y-6">
           <div>
-            <div className="flex items-center justify-between">
+            <div className="relative flex items-center">
               <Input
-                type="type"
+                type="text"
                 placeholder="0.00"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="text-3xl text-white bg-[#161A1A] border border-[#547F7F99] py-6 relative w-full"
+                className="text-3xl text-white bg-[#161A1A] border border-[#547F7F99] py-6 w-full pr-36"
               />
-              <div className="flex items-center gap-4 absolute right-7 md:right-7">
+              <div className="flex items-center gap-4 absolute right-4 top-1/2 -translate-y-1/2">
                 <span className="text-gray-400 text-lg font-semibold">DAI</span>
                 <Button
                   variant="secondary"
